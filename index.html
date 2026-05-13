@@ -1,0 +1,33 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<div class="hdr">
+  <div class="hdr-title">🧘 Sabroze Routine</div>
+  <div class="hdr-sub">Smart grooming routine with live availability</div>
+</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="setTab('routine')">📅 Routine</button>
+  <button class="tab" onclick="setTab('products')">🧴 Products</button>
+</div>
+
+<div class="controls">
+  <div class="ctrl-row">
+    <label>📅 Date:
+      <input type="date" id="selDate" onchange="setDate(this.value)">
+    </label>
+  </div>
+
+  <div class="ctrl-row">
+    <label>
+      <input type="checkbox" id="bathCheck" onchange="ST.isBath=this.checked;render()">
+      I'm bathing today
+    </label>
+  </div>
+
+  <div class="ctrl-row">
+    <button class="loc-btn active" id="homeBtn" onclick="setLocation(true)">🏠 At Home</button>
+    <button class="loc-btn" id="outBtn" onclick="setLocation(false)">🚪 Going Out</button>
+  </div>
+</div>
+
+<div id="app">Loading...</div>
